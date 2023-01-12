@@ -5,6 +5,7 @@
 
     loginbutton.on('click', function(event) {
         login.toggleClass('hidden');
+        console.log('class');
     });
 
 })(jQuery);
