@@ -11,22 +11,91 @@
     <!-- Login formular -->
 
     <style>
-      .login-popup {
-        position: absolute;
-        top: (50%-420px);
-        left: (50%-420px);
-
-        height: 420px;
-        width: 420px;
-        background-color: #cbd5e1;
+      .hidden {
+        display: none !important;
       }
 
-      .login-form {
+      .login-popup {
+        position: absolute;
+        top: (50%);
+        left: (50%);
+
+        padding: 40px;
+
+        background-color: rgb(249 250 251);
+        border-radius: 2%;
+
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      .form-body {
+        padding-left: 12%;
+      }
+
+      .login-form-heading {
+        font-weight: 800;
+        font-size: 26px;
+        margin: 0px;
+      }
+
+      .login-form-label {
+        display: block;
+        text-align: start;
+
+        margin-top: 14px;
+        margin-bottom: 2px;
+      }
+
+      .display-block {
+        display: block;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      button {
+        margin-top: 15px;
       }
     </style>
 
-    <div class="login-popup">
-      <form action="" class="login-form"></form>
+    <div class="login-popup hidden">
+      <form action="" class="login-form">
+        <h3 class="login-form-heading">Prihlás sa do svojho účtu!</h3>
+        <div class="form-body">
+          <div>
+            <label for="email-address" class="login-form-label"
+              >Emailova addresa</label
+            >
+            <input
+              id="email-address"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              class="display-block"
+              placeholder="priklad@gmail.com"
+            />
+          </div>
+          <div>
+            <label for="password" class="login-form-label">Heslo</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              class="display-block"
+              placeholder="123456789"
+            />
+          </div>
+          <div class="flex">
+            <button>Login</button>
+          </div>
+        </div>
+      </form>
     </div>
 
     <!-- Koniec Login Formularu -->
